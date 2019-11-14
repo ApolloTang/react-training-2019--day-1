@@ -9,7 +9,7 @@ To install nvm follow instruction here: [https://itnext.io/nvm-the-easiest-way-t
 
 Don't install nvm with homebrew; if you had, remove it by follow instruction here: [https://medium.com/@isaacjoe/best-way-to-install-and-use-nvm-on-mac-e3a3f6bc494d](https://medium.com/@isaacjoe/best-way-to-install-and-use-nvm-on-mac-e3a3f6bc494d).<br />
 
-If you want a alternative to nvm, you can try **n**, although I have never use it. More information here: [https://github.com/tj/n](https://github.com/tj/n).<br />
+If you want an alternative to nvm, you can try **n**, although I have never use it. More information here: [https://github.com/tj/n](https://github.com/tj/n).<br />
 
 ### Install Yarn
 Yarn is a node package manager like npm.
@@ -22,3 +22,8 @@ You will need to install chrome development tools for React and Redux:
 [https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 [https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
+
+### Visual studio code
+
+If you use Visual studio code, please set up your install the necessary plugins and configure settings
+ by follow the instruction in folders [setetting-up-vscode](./setting-up-vscode).
