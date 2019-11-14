@@ -25,7 +25,7 @@ You will need to install chrome development tools for React and Redux:
 
 ### Visual studio code
 
-If you use Visual studio code, please set up your install the necessary plugins and configure settings by follow the instruction in:
+If you use Visual studio code, please install the necessary plugins and configure settings by follow the instructions in:
  - [setting-up-vscode/pluggins-you-need.md](./setting-up-vscode/pluggins-you-need.md)
  - [setting-up-vscode/enable-eslint-on-ts-file.md](./setting-up-vscode/enable-eslint-on-ts-file.md)
 
