@@ -1,5 +1,5 @@
 # Setting up
 
-Following instruction in [insturction](instructions/readme.md)
+Following instruction in [insturctions/readme.me](instructions/readme.md)
 
 
