@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>React lab</title>
+<style type="text/less">
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: hsl(0,30%,95%);
+  }
+</style>
+</head>
+<body>
+<div id="react-container"></div>
+<script src="http://localhost:29090/babel.min.js"></script>
+<script src="http://localhost:29090/polyfill.min.js"></script>
+<script src="http://localhost:29090/react.development.js"></script>
+<script src="http://localhost:29090/react-dom.development.js"></script>
+<script src="http://localhost:29090/lodash.js"></script>
+<script src="http://localhost:29090/less.min.js"></script>
+<script type="text/babel" src="00.js"></script>
+<script>
+  const versionInfo = ''
+  + '    _ version: ' + _.VERSION + '\n'
+  + 'React version: ' + React.version + '\n'
+  + ' less version: ' + less.version + '\n'
+  console.info(versionInfo)
+</script>
+</body>
+</html>
