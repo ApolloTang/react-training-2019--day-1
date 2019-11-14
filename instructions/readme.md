@@ -19,14 +19,13 @@ To install yarn follow instruction here: [https://yarnpkg.com/lang/en/docs/insta
 ### React development tool
 
 You will need to install chrome development tools for React and Redux:
-[https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-[https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+  - [https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+  - [https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
 
 ### Visual studio code
 
-If you use Visual studio code, please set up your install the necessary plugins and configure settings
- by follow the instruction: 
+If you use Visual studio code, please set up your install the necessary plugins and configure settings by follow the instruction in:
  - [setting-up-vscode/pluggins-you-need.md](./setting-up-vscode/pluggins-you-need.md)
  - [setting-up-vscode/enable-eslint-on-ts-file.md](./setting-up-vscode/enable-eslint-on-ts-file.md)
 
