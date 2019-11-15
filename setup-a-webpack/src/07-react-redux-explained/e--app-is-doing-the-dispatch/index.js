@@ -5,14 +5,10 @@ const container = document.createElement('div')
 container.id = 'app'
 document.body.appendChild(container)
 
-/* *********************************************************************************
-
-yarn dev src/07-counter-app-readering-redux-state/e--app-is-doing-the-dispatch
-
-*********************************************************************************** */
 
 
-// App
+
+// App <-- app now has control
 // ====
 const App = ({
     dispatch_increase,
@@ -64,22 +60,25 @@ const store = createStore(reducer)
 
 
 
+// update store
+// ============
+const dispatch_increase = () => {
+  const action = {type:'inc'}
+  console.log(`action:    ${JSON.stringify(action)}`)
+  store.dispatch(action)
+}
+
+const dispatch_decrease = () => {
+  const action = {type:'dec'}
+  console.log(`action:    ${JSON.stringify(action)}`)
+  store.dispatch(action)
+}
+
+
 
 // Renderer
 // ========
 const render = (state) => {
-  const dispatch_increase = () => {
-    const action = {type:'inc'}
-    console.log(`action:    ${JSON.stringify(action)}`)
-    store.dispatch(action)
-  }
-
-  const dispatch_decrease = () => {
-    const action = {type:'dec'}
-    console.log(`action:    ${JSON.stringify(action)}`)
-    store.dispatch(action)
-  }
-
   ReactDOM.render(
     <App
       dispatch_increase={dispatch_increase}

@@ -5,10 +5,7 @@ const container = document.createElement('div')
 container.id = 'app'
 document.body.appendChild(container)
 
-/* *********************************************************************************
 
-yarn dev src/07-counter-app-readering-redux-state/f--same-as-e-but-non-premitive-state/
-*********************************************************************************** */
 
 
 // App
@@ -69,27 +66,28 @@ const store = createStore(reducer)
 
 
 
+// update store
+// ============
+const dispatch_increase = () => {
+  const action = {type:'inc'}
+  console.log(`action:    ${JSON.stringify(action)}`)
+  store.dispatch(action)
+}
+
+const dispatch_decrease = () => {
+  const action = {type:'dec'}
+  console.log(`action:    ${JSON.stringify(action)}`)
+  store.dispatch(action)
+}
+
+
+
 
 // Renderer
 // ========
 const render = (state) => {
-  // update store
-  const dispatch_increase = () => {
-    const action = {type:'inc'}
-    console.log(`action:    ${JSON.stringify(action)}`)
-    store.dispatch(action)
-  }
-
-  const dispatch_decrease = () => {
-    const action = {type:'dec'}
-    console.log(`action:    ${JSON.stringify(action)}`)
-    store.dispatch(action)
-  }
-
-
   // select store
   const count = state.count
-
 
   // update virtual dom
   ReactDOM.render(

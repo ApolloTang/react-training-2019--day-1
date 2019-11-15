@@ -5,11 +5,6 @@ const container = document.createElement('div')
 container.id = 'app'
 document.body.appendChild(container)
 
-/* *********************************************************************************
-
-yarn dev src/07-counter-app-readering-redux-state/b--add-previous-counter-reduce-demo
-
-*********************************************************************************** */
 
 
 
