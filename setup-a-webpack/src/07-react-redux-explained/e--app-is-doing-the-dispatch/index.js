@@ -98,7 +98,7 @@ store.subscribe(function listener(){
   const nextState = store.getState()
   logger(initialState)(nextState)
 
-  render(nextState)  // <------ @@ push state into vertual dom @@
+  render(nextState)  // <------ @@ push state into virtual dom @@
 })
 
 
