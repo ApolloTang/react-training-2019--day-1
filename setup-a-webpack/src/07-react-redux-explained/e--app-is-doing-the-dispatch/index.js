@@ -68,13 +68,13 @@ const store = createStore(reducer)
 // Renderer
 // ========
 const render = (state) => {
-  const handle_increase = () => {
+  const dispatch_increase = () => {
     const action = {type:'inc'}
     console.log(`action:    ${JSON.stringify(action)}`)
     store.dispatch(action)
   }
 
-  const handle_decrease = () => {
+  const dispatch_decrease = () => {
     const action = {type:'dec'}
     console.log(`action:    ${JSON.stringify(action)}`)
     store.dispatch(action)
@@ -82,8 +82,8 @@ const render = (state) => {
 
   ReactDOM.render(
     <App
-      dispatch_increase={handle_increase}
-      dispatch_decrease={handle_decrease}
+      dispatch_increase={dispatch_increase}
+      dispatch_decrease={dispatch_decrease}
       state={state}
     />,
     document.getElementById('app')
