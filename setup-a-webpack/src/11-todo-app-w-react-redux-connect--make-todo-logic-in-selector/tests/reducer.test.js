@@ -2,6 +2,7 @@ import { initialState, reducer } from '../reducer'
 import { actions } from '../action'
 
 
+
 describe('Todo reducer', ()=>{
   it('Should return the initail state', ()=>{
     const nonTodosAction = {}
@@ -28,8 +29,7 @@ describe('Todo reducer', ()=>{
     const nextState = []
     expect(
       reducer(
-        prevState,
-        actions.todos_delete(idToDelete)
+        prevState, actions.todos_delete(idToDelete)
       )
     ).toEqual(nextState)
   })
@@ -44,8 +44,7 @@ describe('Todo reducer', ()=>{
     ]
     expect(
       reducer(
-        prevState,
-        actions.todos_toggle(idToToggle)
+        prevState, actions.todos_toggle(idToToggle)
       )
     ).toEqual(nextState)
   })

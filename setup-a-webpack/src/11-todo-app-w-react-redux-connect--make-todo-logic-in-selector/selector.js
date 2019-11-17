@@ -1,22 +1,13 @@
-import {actions} from './action'
-import uniqueId from 'lodash/uniqueId'
+import { actions } from './action'
+import { makeNewTodo } from './model'
+
 
 
 const mapStoreToProps = store => {
   // store = [{}, {}, {}, ...]
   const todos = store
-  return {
-    todos
-  }
+  return { todos }
 }
-
-
-const makeNewTodo = todoText => ({
-  id: uniqueId(),
-  text: todoText,
-  timeStamp: Date.now(),
-  completed: false
-})
 
 
 

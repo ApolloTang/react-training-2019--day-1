@@ -1,6 +1,7 @@
 import { actionNames } from './action'
 
 
+
 const initialState = []
 
 
@@ -37,4 +38,3 @@ export {
   initialState,
   reducer
 }
-

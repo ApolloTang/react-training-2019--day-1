@@ -1,25 +1,26 @@
 import React from 'react'
 import {render, fireEvent} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import {
-  NewTodo
-} from '../new-todo'
+import { NewTodo } from '../new-todo'
+
 
 describe('[New Todo Component]', ()=>{
-  const regex_newTodoLabel = /enter.todo/i
+  const regex_newTodoLabel = /enter\stodo/i
+
 
   test('Render a input field', () =>{
     const {
       getByLabelText,
-    } = render(<NewTodo/>)
+    } = render(<NewTodo newTodoSubmit={()=>{}}/>)
 
     getByLabelText(regex_newTodoLabel)
   })
 
+
   test('Input field take user values', () =>{
     const {
       getByLabelText,
-    } = render(<NewTodo/>)
+    } = render(<NewTodo newTodoSubmit={()=>{}}/>)
 
     const newTodoInput = getByLabelText(regex_newTodoLabel)
 
@@ -28,7 +29,8 @@ describe('[New Todo Component]', ()=>{
     expect(newTodoInput).toHaveAttribute('value', todoText)
   })
 
-  test('Can submit a todo text, and reset itself', () =>{
+
+  it('Can submit a todo text, and reset itself', () =>{
     const newTodoSubmitCallback = jest.fn()
 
     const {
