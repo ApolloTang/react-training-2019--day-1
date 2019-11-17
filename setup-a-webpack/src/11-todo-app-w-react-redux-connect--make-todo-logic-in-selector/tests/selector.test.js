@@ -3,7 +3,7 @@ import fakeConfigureStore from 'redux-mock-store'
 // one. In other words, it does not update the Redux store.
 
 import {
-  mapStoreToProps,
+  mapAppStateToProps,
   mapDispatchToProps,
   makeNewTodo
 } from  '../selector'
@@ -12,11 +12,11 @@ import { actions, actionNames } from '../action'
 
 
 
-describe('[Selector, mapStoreToProps]', ()=>{
-  const fakeStore = []
+describe('[Selector, mapAppStateToProps]', ()=>{
+  const fakeAppState = []
 
   it('Should map store to todos property: ', () => {
-    expect(mapStoreToProps(fakeStore)).toEqual({todos:fakeStore})
+    expect(mapAppStateToProps(fakeAppState)).toEqual({todos:fakeAppState})
   })
 })
 

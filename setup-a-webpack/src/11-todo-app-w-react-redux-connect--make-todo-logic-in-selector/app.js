@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import {
-  mapStoreToProps,
+  mapAppStateToProps,
   mapDispatchToProps
 } from './selector'
 
@@ -57,7 +57,7 @@ const App = ({
 
 
 const ConnectedApp = connect(
-  mapStoreToProps,
+  mapAppStateToProps,
   mapDispatchToProps
 )(App)
 

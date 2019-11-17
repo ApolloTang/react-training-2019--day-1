@@ -3,9 +3,9 @@ import { makeNewTodo } from './model'
 
 
 
-const mapStoreToProps = store => {
-  // store = [{}, {}, {}, ...]
-  const todos = store
+const mapAppStateToProps = appState => {
+  // appState = [{}, {}, {}, ...]
+  const todos = appState
   return { todos }
 }
 
@@ -25,7 +25,7 @@ const mapDispatchToProps = dispatch => (
 
 
 export {
-  mapStoreToProps,
+  mapAppStateToProps,
   mapDispatchToProps,
   makeNewTodo
 }
