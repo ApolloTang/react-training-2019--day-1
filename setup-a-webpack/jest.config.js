@@ -41,12 +41,6 @@ module.exports = {
       branch: 50,
       functions: 50,
       lines: 50
-    },
-    './src/setup-check/check-a02-handling-async-function/my-async-fn.js': {
-      stagements: 100,
-      branch: 100,
-      functions: 100,
-      lines: 100
     }
   },
 
