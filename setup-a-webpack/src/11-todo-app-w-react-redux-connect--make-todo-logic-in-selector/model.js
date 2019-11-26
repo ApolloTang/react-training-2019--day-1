@@ -30,7 +30,7 @@ const exampleData_todos = [
 // make new Todo
 // =============
 
-const makeNewTodo = (todoText:string) => ({
+const makeNewTodo = (todoText) => ({
   id: uniqueId(),
   text: todoText,
   timeStamp: Date.now(),
