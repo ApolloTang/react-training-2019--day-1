@@ -31,7 +31,13 @@ describe('[Selector, mapDispatchToProps]', ()=>{
     const fakeDispatch = fakeStore.dispatch
     const { dispatch_addTodo } = mapDispatchToProps(fakeDispatch)
 
-    const newTodo = {id: 'newID', timeStamp:'12345', text:'learn React', completed:false}
+    const newTodo = {
+      id: 'newID',
+      text:'learn React',
+      timeStamp:'12345',
+      completed:false
+    }
+
     dispatch_addTodo(newTodo)
     expect(fakeStore.getActions()).toEqual([
       {
