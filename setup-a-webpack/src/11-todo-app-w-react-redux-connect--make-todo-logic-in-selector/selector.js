@@ -2,11 +2,12 @@ import { actions } from './action'
 import { makeNewTodo } from './model'
 
 
-
 const mapAppStateToProps = appState => {
   // appState = [{}, {}, {}, ...]
   const todos = appState
-  return { todos }
+  return { 
+    todos 
+  }
 }
 
 
