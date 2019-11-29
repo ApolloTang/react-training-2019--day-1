@@ -20,7 +20,7 @@ function renderWithStore(
 
 
 describe('Todo App',()=>{
-  const regex_newTodoLabel = /enter.todo/i
+  const regex_newTodoLabel = /enter\stodo/i
 
   test('Render a "Adding todo" input field', () =>{
     const {
@@ -81,12 +81,11 @@ describe('Todo App',()=>{
       getAllByTestId
       } = renderWithStore(<ConnectedApp/>)
 
-      const todoTexts = [
+    const todoTexts = [
       'learn react', 'learn redux', 'learn typescript'
     ]
 
     // We want to update todo item with the following text
-    // const todoText_toUpdate = [...todoTexts].splice(1,1)[0]  // 'learn redux'
     const todoText_toUpdate = todoTexts[1]  // 'learn redux'
 
     const newTodoInput = getByLabelText(regex_newTodoLabel)
@@ -99,7 +98,7 @@ describe('Todo App',()=>{
     })
 
     // now todoItems has been created
-    getAllByTestId('todo-item')
+    expect(getAllByTestId('todo-item')).toHaveLength(3)
 
     // get the checkbox;
     const checkboxToCheck = getByLabelText(todoText_toUpdate)
@@ -108,10 +107,17 @@ describe('Todo App',()=>{
     expect(checkboxToCheck.checked).toBe(false)
 
     // click it:
-    fireEvent.click(getByText('learn redux'))
+    const todoItemToClick = getByText('learn redux')
+    fireEvent.click(todoItemToClick)
 
     // test it:
     expect(checkboxToCheck.checked).toBe(true)
+
+    // click again:
+    fireEvent.click(todoItemToClick)
+
+    // test it:
+    expect(checkboxToCheck.checked).toBe(false)
   })
 
 
