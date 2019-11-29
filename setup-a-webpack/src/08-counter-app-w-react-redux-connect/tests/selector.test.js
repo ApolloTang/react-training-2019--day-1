@@ -25,7 +25,7 @@ describe('[Selector, mapDispatchToProps]', ()=>{
   const initialState = {count: 0}  // counter model initial state
 
   it('dispatch_increase() and store receive correct action', () => {
-    const fakeStore = fakeCreateStore(initialState)
+    const fakeStore = fakeCreateStore()
     const fakeDispatch = fakeStore.dispatch
     const { dispatch_increase } = mapDispatchToProps(fakeDispatch)
     dispatch_increase()

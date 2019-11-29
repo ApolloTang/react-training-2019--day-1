@@ -30,7 +30,7 @@ const App = ({
     <div>
       <button onClick={handle_increase}>+</button>
       <button onClick={handle_decrease}>-</button>
-      <div data-testid='count-value'>count: {count}</div>
+      <div>count: {count}</div>
     </div>
   )
 }

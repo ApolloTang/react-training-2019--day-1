@@ -13,13 +13,13 @@ import {ConnectedApp} from '../app'
 test('can render app with redux defaults state', ()=>{
   const store = createStore(reducer)
   const {
-    getByTestId
+    getByText
   } = render(
     <Provider store={store} >
       <ConnectedApp />
     </Provider>
   )
-  const counterDisplay = getByTestId('count-value')
+  const counterDisplay = getByText(/count:/i)
   expect(counterDisplay).toHaveTextContent('0')
 })
 
@@ -27,14 +27,13 @@ test('can render app with redux defaults state', ()=>{
 test('can increase counter from default state', ()=>{
   const store = createStore(reducer)
   const {
-    getByText,
-    getByTestId
+    getByText
   } = render(
     <Provider store={store} >
       <ConnectedApp />
     </Provider>
   )
-  const counterDisplay = getByTestId('count-value')
+  const counterDisplay = getByText(/count:/i)
   const increaseButton = getByText('+')
   expect(counterDisplay).toHaveTextContent('0')
   fireEvent.click(increaseButton)
@@ -46,13 +45,12 @@ test('can decrease counter from default state', ()=>{
   const store = createStore(reducer)
   const {
     getByText,
-    getByTestId
   } = render(
     <Provider store={store} >
       <ConnectedApp />
     </Provider>
   )
-  const counterDisplay = getByTestId('count-value')
+  const counterDisplay = getByText(/count:/i)
   const increaseButton = getByText('-')
   expect(counterDisplay).toHaveTextContent('0')
   fireEvent.click(increaseButton)
