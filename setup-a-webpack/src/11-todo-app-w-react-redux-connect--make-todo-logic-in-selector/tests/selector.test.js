@@ -34,6 +34,7 @@ describe('[Selector, mapDispatchToProps]', ()=>{
     const { dispatch_addTodo } = mapDispatchToProps(fakeDispatch)
 
     const newTodoText = 'learn React'
+    
     const expectedNewTodo = {
       id: expect.any(String),
       text: newTodoText,
@@ -104,6 +105,7 @@ describe('[Selector, mapDipatchToProps (integration test on action creator)]', (
 
   describe('dispatch_addTodo() can dispatch action creator: actions.todos_add()', () => {
     const newTodoText = 'learn React'
+    
     const expectedNewTodo = {
       id: expect.any(String),
       text: newTodoText,
